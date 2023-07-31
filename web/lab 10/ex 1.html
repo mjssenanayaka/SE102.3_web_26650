@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <title>Math Operations</title>
+</head>
+<body>
+    <script>
+        function performMathOperation(operation) {
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var num2 = parseFloat(prompt("Enter the second number:"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Invalid input. Please enter valid numbers.");
+                return;
+            }
+
+            var result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    alert("Addition result: " + result);
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    alert("Subtraction result: " + result);
+                    break;
+                case 'divide':
+                    if (num2 === 0) {
+                        alert("Division by zero is not allowed.");
+                        return;
+                    }
+                    result = num1 / num2;
+                    alert("Division result: " + result);
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    alert("Multiplication result: " + result);
+                    break;
+                default:
+                    alert("Invalid operation.");
+            }
+        }
+
+        var operation = prompt("Enter the operation (add, subtract, divide, multiply):");
+        performMathOperation(operation);
+    </script>
+</body>
+</html>

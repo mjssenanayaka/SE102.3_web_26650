@@ -1,0 +1,23 @@
+
+<html>
+<head>
+    <title>Button Confirm Redirect</title>
+</head>
+<body>
+    <button id="googleButton">Google</button>
+
+    <script>
+        document.getElementById("googleButton").addEventListener("click", function() {
+            var confirmation = confirm("Do you want to visit Google?");
+            
+            if (confirmation) {
+                
+                window.location.href = "https://www.google.com";
+            } else {
+                
+                alert("You decided to stay");
+            }
+        });
+    </script>
+</body>
+</html>

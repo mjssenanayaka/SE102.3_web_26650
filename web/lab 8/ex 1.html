@@ -1,0 +1,32 @@
+
+<html>
+<head>
+  <title>Button Color Change</title>
+  <style>
+    /* Add some basic styling to the buttons */
+    .color-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Three buttons for Red, Green, and Blue colors -->
+  <button class="color-button" id="redButton" onmouseover="changeColor('red')" onmouseout="resetColor('red')">Red</button>
+  <button class="color-button" id="greenButton" onmouseover="changeColor('green')" onmouseout="resetColor('green')">Green</button>
+  <button class="color-button" id="blueButton" onmouseover="changeColor('blue')" onmouseout="resetColor('blue')">Blue</button>
+
+  <script>
+    
+    function changeColor(color) {
+      document.getElementById(color + 'Button').style.backgroundColor = color;
+    }
+
+    
+    function resetColor(color) {
+      document.getElementById(color + 'Button').style.backgroundColor = '';
+    }
+  </script>
+</body>
+</html>
